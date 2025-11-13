@@ -16,6 +16,14 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
+                <div class="mb-3">
+                    <label for="category_description" class="form-label">Description</label>
+                    <textarea name="category_description" id="category_description" class="form-control"
+                        rows="4">{{ old('category_description') }}</textarea>
+                    @error('category_description')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
                 <button type="submit" class="btn btn-primary">Create Category</button>
             </form>
         </div>
